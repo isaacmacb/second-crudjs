@@ -1,0 +1,32 @@
+Neste exemplo, utilizamos o array itemspara simular um banco de dados simples. Cada item possui um id, namee description. As rotas implementadas são as seguintes:
+
+POST /items: Cria um novo item no array items.
+GET /items: Retorna todos os itens do array.
+GET /items/:id: Retornar o item correspondente ao ID especificado.
+PUT /items/:id: Atualizado o item correspondente ao ID especificado.
+DELETE /items/:id: Exclui o item correspondente ao ID especificado.
+
+
+
+parseInt: É uma função em JavaScript usada para converter uma string em um número inteiro. 
+No código, é utilizado para converter o parâmetro de ID da URL, 
+que é uma string, em um valor numérico para comparar com o ID do item.
+
+app.listen: É um método do objeto app do Express que inicia o servidor HTTP e escuta em uma porta específica. 
+Ele recebe um argumento para especificar a porta em que o servidor será iniciado.
+
+message: É uma propriedade usada para enviar mensagens de resposta para o cliente. 
+No código do CRUD, é usado para fornecer mensagens informativas de sucesso ou erro ao realizar operações de criação, leitura, 
+atualização e exclusão de itens.
+
+bodyParser: É um middleware do Express usado para analisar o corpo das solicitações HTTP. 
+Ele é usado para converter os dados enviados no corpo da solicitação em um formato útil para a manipulação no código. 
+No exemplo, o body-parser é usado para analisar o corpo das solicitações como dados JSON.
+
+urlencoded: É um método do body-parser que define a maneira como o corpo das solicitações codificado em URL é analisado.
+ O urlencoded({ extended: true }) é usado para analisar corpos de solicitações com dados codificados em URL.
+
+extended: É uma opção do bodyParser.urlencoded que permite controlar como os dados são analisados. 
+Quando extended é definido como true, o body-parser permite objetos complexos 
+e tipos de dados aninhados nos dados codificados em URL.
+
